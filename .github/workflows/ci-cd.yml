@@ -26,5 +26,5 @@ jobs:
 
     - name: Deploy to IIS
       run: |
-        Remove-Item "D:\Hemanth\iis\ci-cd\dist\ci-cd\browser\*" -Recurse -Force
-        Copy-Item -Path ".\dist\ci-cd\browser\*" -Destination "D:\Hemanth\iis\ci-cd\dist\ci-cd\browser" -Recurse
+        Remove-Item "D:\Hemanth\iis\ci-cd2\dist\ci-cd\browser\*" -Recurse -Force
+        Copy-Item -Path ".\dist\ci-cd\browser\*" -Destination "D:\Hemanth\iis\ci-cd2\dist\ci-cd\browser" -Recurse
