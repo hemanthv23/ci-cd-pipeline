@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { Landing } from './components/landing/landing';
+import { LandingComponent } from './components/landing/landing';
 
 export const routes: Routes = [
   {
     path: '',
-    component: Landing,
+    component: LandingComponent,
     title: 'Home - ci/cd-githubActions'
   },
   {

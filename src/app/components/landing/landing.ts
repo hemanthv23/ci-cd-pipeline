@@ -1,45 +1,86 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 @Component({
   selector: 'app-landing',
-  standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule],
   templateUrl: './landing.html',
-  styleUrl: './landing.scss',
+  styleUrls: ['./landing.scss']
 })
-export class Landing {
-  menuOpen = false;
+export class LandingComponent {
+  // Personal Details
+  public contactEmail: string = 'hemanthshetty346@gmail.com';
 
-  formData = {
+  // Navbar State
+  public menuOpen: boolean = false;
+
+  // Contact Form State
+  public formData: FormData = {
     name: '',
     email: '',
     subject: '',
     message: ''
   };
+  public formSubmitted: boolean = false;
 
+  constructor() { }
+
+  /**
+   * Toggles the mobile navigation menu open/closed state.
+   */
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
   }
 
+  /**
+   * Closes the mobile menu, typically called after a link is clicked.
+   */
   closeMenu(): void {
-    this.menuOpen = false;
+    if (this.menuOpen) {
+      this.menuOpen = false;
+    }
   }
 
+  /**
+   * Handles the submission of the contact form.
+   * In a real application, this would involve sending data to a backend API.
+   */
   submitForm(): void {
-    console.log('Form submitted:', this.formData);
-    
-    // Here you would typically send the form data to your backend
-    // For now, we'll just show an alert
-    alert('Thank you for your message! We will get back to you soon.');
-    
-    // Reset form
-    this.formData = {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    };
+    // Basic form validation (for demonstration)
+    if (this.formData.name && this.formData.email && this.formData.subject && this.formData.message) {
+      console.log('--- Form Submission Data (Hardcore Log) ---');
+      console.log('Sender Name:', this.formData.name);
+      console.log('Sender Email:', this.formData.email);
+      console.log('Subject:', this.formData.subject);
+      console.log('Message Length:', this.formData.message.length);
+      console.log('Target Email (Hemanth):', this.contactEmail);
+      console.log('-------------------------------------------');
+
+      // Simulate API call success
+      this.formSubmitted = true;
+      
+      // Clear the form data after submission
+      this.formData = {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      };
+
+      // Auto-hide success message after 5 seconds
+      setTimeout(() => {
+        this.formSubmitted = false;
+      }, 5000);
+
+    } else {
+      alert('Error: Please fill out all required fields.');
+    }
   }
 }
