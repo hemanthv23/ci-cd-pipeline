@@ -1,0 +1,348 @@
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-content">
+      <div class="logo">
+        <span class="logo-icon">🚀</span>
+        <span class="logo-text">YourBrand</span>
+      </div>
+      <button class="mobile-menu-btn" (click)="toggleMenu()">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links" [class.active]="menuOpen">
+        <li><a href="#home" (click)="closeMenu()">Home</a></li>
+        <li><a href="#features" (click)="closeMenu()">Features</a></li>
+        <li><a href="#about" (click)="closeMenu()">About</a></li>
+        <li><a href="#pricing" (click)="closeMenu()">Pricing</a></li>
+        <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+        <li><a href="#" class="btn-primary" (click)="closeMenu()">Get Started</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-background"></div>
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">Transform Your Digital Experience</h1>
+      <p class="hero-subtitle">Innovative solutions that empower your business to reach new heights. Join thousands of satisfied customers worldwide.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-hero-primary">Start Free Trial</a>
+        <a href="#features" class="btn-hero-secondary">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">50K+</div>
+          <div class="stat-label">Active Users</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Satisfaction</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Powerful Features</h2>
+      <p class="section-subtitle">Everything you need to succeed in one platform</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title">Lightning Fast</h3>
+        <p class="feature-description">Optimized performance ensures your applications run at blazing speeds with minimal latency.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3 class="feature-title">Secure & Private</h3>
+        <p class="feature-description">Enterprise-grade security with end-to-end encryption to keep your data safe and protected.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3 class="feature-title">Fully Responsive</h3>
+        <p class="feature-description">Beautiful design that adapts seamlessly to any device, from mobile to desktop.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3 class="feature-title">Customizable</h3>
+        <p class="feature-description">Tailor every aspect to match your brand identity and business requirements.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3 class="feature-title">Analytics</h3>
+        <p class="feature-description">Comprehensive insights and detailed reports to track your growth and performance.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3 class="feature-title">Global Reach</h3>
+        <p class="feature-description">Connect with customers worldwide through our distributed network infrastructure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-image">
+        <div class="image-placeholder">
+          <span class="placeholder-icon">💼</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <h2 class="about-title">About Our Company</h2>
+        <p class="about-description">We're a passionate team dedicated to building innovative solutions that make a difference. With over a decade of experience, we've helped thousands of businesses transform their digital presence and achieve their goals.</p>
+        <div class="about-features">
+          <div class="about-feature-item">
+            <span class="check-icon">✓</span>
+            <span>10+ Years of Excellence</span>
+          </div>
+          <div class="about-feature-item">
+            <span class="check-icon">✓</span>
+            <span>Award-Winning Service</span>
+          </div>
+          <div class="about-feature-item">
+            <span class="check-icon">✓</span>
+            <span>Expert Team Members</span>
+          </div>
+          <div class="about-feature-item">
+            <span class="check-icon">✓</span>
+            <span>Customer-First Approach</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Simple Pricing</h2>
+      <p class="section-subtitle">Choose the perfect plan for your needs</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="plan-name">Starter</h3>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">29</span>
+            <span class="period">/month</span>
+          </div>
+        </div>
+        <ul class="plan-features">
+          <li><span class="feature-check">✓</span> Up to 10 users</li>
+          <li><span class="feature-check">✓</span> 50GB storage</li>
+          <li><span class="feature-check">✓</span> Basic analytics</li>
+          <li><span class="feature-check">✓</span> Email support</li>
+          <li><span class="feature-check">✓</span> Mobile app access</li>
+        </ul>
+        <button class="plan-button">Choose Plan</button>
+      </div>
+      <div class="pricing-card featured">
+        <div class="popular-badge">Most Popular</div>
+        <div class="pricing-header">
+          <h3 class="plan-name">Professional</h3>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">79</span>
+            <span class="period">/month</span>
+          </div>
+        </div>
+        <ul class="plan-features">
+          <li><span class="feature-check">✓</span> Up to 50 users</li>
+          <li><span class="feature-check">✓</span> 500GB storage</li>
+          <li><span class="feature-check">✓</span> Advanced analytics</li>
+          <li><span class="feature-check">✓</span> Priority support</li>
+          <li><span class="feature-check">✓</span> All integrations</li>
+        </ul>
+        <button class="plan-button">Choose Plan</button>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="plan-name">Enterprise</h3>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">199</span>
+            <span class="period">/month</span>
+          </div>
+        </div>
+        <ul class="plan-features">
+          <li><span class="feature-check">✓</span> Unlimited users</li>
+          <li><span class="feature-check">✓</span> Unlimited storage</li>
+          <li><span class="feature-check">✓</span> Custom analytics</li>
+          <li><span class="feature-check">✓</span> 24/7 phone support</li>
+          <li><span class="feature-check">✓</span> Dedicated manager</li>
+        </ul>
+        <button class="plan-button">Choose Plan</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-subtitle">Don't just take our word for it</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"This platform has completely transformed how we do business. The results have been incredible and our team couldn't be happier!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JD</div>
+          <div class="author-info">
+            <div class="author-name">John Doe</div>
+            <div class="author-role">CEO, Tech Corp</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Outstanding support and amazing features. I've recommended this to all my colleagues. It's simply the best solution available."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SM</div>
+          <div class="author-info">
+            <div class="author-name">Sarah Miller</div>
+            <div class="author-role">Marketing Director</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The ease of use and powerful features make this an essential tool for any modern business. Highly recommended!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MJ</div>
+          <div class="author-info">
+            <div class="author-name">Michael Johnson</div>
+            <div class="author-role">Product Manager</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-content">
+      <div class="contact-info">
+        <h2 class="contact-title">Get In Touch</h2>
+        <p class="contact-description">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-text">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">hello@yourbrand.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-text">
+              <div class="contact-label">Phone</div>
+              <div class="contact-value">+1 (555) 123-4567</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">
+              <div class="contact-label">Office</div>
+              <div class="contact-value">123 Business St, City, ST 12345</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form (ngSubmit)="submitForm()">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" [(ngModel)]="formData.name" name="name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" [(ngModel)]="formData.email" name="email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Subject" [(ngModel)]="formData.subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" rows="5" [(ngModel)]="formData.message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="form-submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-column">
+        <div class="footer-logo">
+          <span class="logo-icon">🚀</span>
+          <span class="logo-text">YourBrand</span>
+        </div>
+        <p class="footer-description">Building innovative solutions that empower businesses to achieve their goals and transform their digital presence.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">𝕏</a>
+          <a href="#" class="social-link">in</a>
+          <a href="#" class="social-link">f</a>
+          <a href="#" class="social-link">📷</a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4 class="footer-heading">Product</h4>
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Updates</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4 class="footer-heading">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">© 2024 YourBrand. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
