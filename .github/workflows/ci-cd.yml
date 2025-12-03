@@ -24,8 +24,7 @@ jobs:
     - name: Build Angular
       run: npm run build -- --output-path=dist/ci-cd/browser
 
-    # Deploy step will fail on cloud runner; leave commented or use self-hosted runner
-    # - name: Deploy to IIS
-    #   run: |
-    #     Remove-Item "D:\Hemanth\Deployment\ci-cd2\dist\ci-cd\browser\*" -Recurse -Force
-    #     Copy-Item -Path "dist/ci-cd/browser/*" -Destination "D:\Hemanth\Deployment\ci-cd2\dist\ci-cd\browser" -Recurse
+    - name: Deploy to IIS
+      run: |
+        Remove-Item "D:\Hemanth\Deployment\ci-cd2\dist\ci-cd\browser\*" -Recurse -Force
+        Copy-Item -Path "dist/ci-cd/browser/*" -Destination "D:\Hemanth\Deployment\ci-cd2\dist\ci-cd\browser" -Recurse
